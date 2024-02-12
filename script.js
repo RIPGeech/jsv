@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // volume slider function
-  volumeSlider.addEventListener('input', function() {
-      audioPlayer.volume = volumeSlider.value / 100;
-  });
+  // volumeSlider.addEventListener('input', function() {
+  //     audioPlayer.volume = volumeSlider.value / 100;
+  // });
 });
