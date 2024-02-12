@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #c4d9ef;
+    background-color: #f698aa;
 }
 
 .hearts-container {
@@ -17,7 +17,7 @@ body {
 .heart {
     width: 50px;
     height: 50px;
-    background-image: url('https://emojicdn.elk.sh/💖');
+    background-image: url('https://emojicdn.elk.sh/🤍');
     background-size: contain;
     background-repeat: no-repeat;
     animation: rotateHearts 10s linear infinite;
@@ -99,7 +99,7 @@ audio::-webkit-media-controls {
 .audio-controls button::before {
     content: '\2665'; 
     font-size: 50px;
-    color: #ff007f;
+    color: #f698aa;
     position: absolute;
     top: 0;
     left: 0;
