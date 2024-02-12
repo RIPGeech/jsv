@@ -63,16 +63,19 @@ audio::-webkit-media-controls {
 /* custom audio controls */
 .audio-controls {
     position: fixed;
-    top: 10px; /* top position */
+    top: 10px; /* Adjust the top position as needed */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1000; /* controls top hearts */
-    background-color: white; /* controls bg colour */
-    padding: 10px; /* add padding */
-    border-radius: 10px; /* round corners */
+    z-index: 1000; /* Ensure controls are above the hearts */
+    background-color: white; /* White background */
+    padding: 10px; /* Add some padding for better appearance */
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    -webkit-transform: translateX(-50%); /* Safari prefix for transform */
+    -ms-transform: translateX(-50%); /* IE prefix for transform */
+    -webkit-border-radius: 10px; /* Safari prefix for border-radius */
 }
 
 /* style play/pause button */
