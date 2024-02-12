@@ -69,7 +69,7 @@ audio::-webkit-media-controls {
 .audio-controls {
     position: fixed;
     top: 10px; /* top position */
-    top: calc(50% + 4.5em);
+    top: calc(50% + 6.5em);
     left: 50%;
     transform: translateX(-50%);
     display: flex;
