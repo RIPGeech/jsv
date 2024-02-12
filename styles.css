@@ -124,3 +124,23 @@ audio::-webkit-media-controls {
     font-size: 14px;
     margin-right: 10px;
 }
+
+/* safari  */
+@media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) {
+
+    /* style volume slider */
+    .audio-controls input[type="range"] {
+        width: 80px; /* width for mobile */
+        height: 16px; /* height for mobile */
+    }
+
+    /* customize volume slider track and thumb */
+    .audio-controls input[type="range"]::-webkit-slider-thumb {
+        width: 20px; /*width for mobile */
+        height: 20px; /* height for mobile */
+    }
+
+    .audio-controls input[type="range"]::-webkit-slider-runnable-track {
+        height: 8px; /* height for mobile */
+    }
+}}
