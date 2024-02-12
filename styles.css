@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.hearts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.heart {
+    width: 50px;
+    height: 50px;
+    background-image: url('https://emojicdn.elk.sh/💖');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: rotateHearts 10s linear infinite;
+}
+
+@keyframes rotateHearts {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 999; /* higher z-index */
+}
+
+.title {
+    font-size: 3em;
+    opacity: 0;
+    animation: fadeText 5s ease-in forwards;
+}
+
+@keyframes fadeText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* hide default audio controls */
+audio::-webkit-media-controls {
+    display: none;
+}
+
+/* custom audio controls */
+.audio-controls {
+    position: fixed;
+    top: 10px; /* top position */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* controls top hearts */
+    background-color: white; /* controls bg colour */
+    padding: 10px; /* add padding */
+    border-radius: 10px; /* round corners */
+}
+
+/* style play/pause button */
+.audio-controls button {
+    background-color: #ff007f; /* pink colour */
+    color: #ffffff; /* white colour */
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+/* style volume slider */
+.audio-controls input[type="range"] {
+    width: 100px;
+    height: 10px;
+    background: #dddddd; 
+    border-radius: 5px;
+    outline: none;
+    margin: 0 10px;
+}
+
+/* customize volume slider track and thumb */
+.audio-controls input[type="range"]::-webkit-slider-thumb {
+    width: 15px;
+    height: 15px;
+    background: #ff007f; 
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.audio-controls input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: #ff007f; 
+    border-radius: 5px;
+}
+
+/* style volume label */
+.audio-controls .volume-label {
+    color: #ff007f; 
+    font-size: 14px;
+    margin-right: 10px;
+}
